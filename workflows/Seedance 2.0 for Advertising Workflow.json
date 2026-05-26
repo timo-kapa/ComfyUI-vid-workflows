@@ -1,0 +1,1072 @@
+{
+  "config": {},
+  "extra": {
+    "ds": {
+      "offset": [
+        4073.19002994892,
+        -3014.9997753022735
+      ],
+      "scale": 0.24131577316598327
+    }
+  },
+  "groups": [
+    {
+      "bounding": [
+        -1240,
+        3810,
+        2280,
+        780
+      ],
+      "color": "#8AA",
+      "flags": {},
+      "font_size": 24,
+      "id": 1,
+      "title": "METHOD 1 - PROMPT ONLY"
+    },
+    {
+      "bounding": [
+        -1240,
+        4630,
+        2280,
+        870
+      ],
+      "color": "#3f789e",
+      "flags": {},
+      "font_size": 24,
+      "id": 2,
+      "title": "METHOD 2 - REFERENCE IMAGES"
+    },
+    {
+      "bounding": [
+        -1240,
+        5540,
+        2290,
+        790
+      ],
+      "color": "#88A",
+      "flags": {},
+      "font_size": 24,
+      "id": 3,
+      "title": "METHOD 3 - VIDEO EDIT"
+    }
+  ],
+  "id": "4e90b8e2-e180-4ceb-9f15-0771d78de86a",
+  "last_link_id": 36,
+  "last_node_id": 34,
+  "links": [
+    [
+      17,
+      20,
+      0,
+      19,
+      1,
+      "STRING"
+    ],
+    [
+      20,
+      23,
+      0,
+      9,
+      6,
+      "IMAGE"
+    ],
+    [
+      21,
+      17,
+      0,
+      9,
+      7,
+      "IMAGE"
+    ],
+    [
+      30,
+      24,
+      0,
+      30,
+      0,
+      "VIDEO"
+    ],
+    [
+      31,
+      30,
+      0,
+      7,
+      7,
+      "VIDEO"
+    ],
+    [
+      33,
+      7,
+      0,
+      31,
+      0,
+      "VIDEO"
+    ],
+    [
+      35,
+      9,
+      0,
+      32,
+      0,
+      "VIDEO"
+    ],
+    [
+      36,
+      19,
+      0,
+      33,
+      0,
+      "VIDEO"
+    ]
+  ],
+  "nodes": [
+    {
+      "bgcolor": "#653",
+      "color": "#432",
+      "flags": {},
+      "id": 7,
+      "inputs": [
+        {
+          "link": null,
+          "localized_name": "model",
+          "name": "model",
+          "type": "COMFY_DYNAMICCOMBO_V3",
+          "widget": {
+            "name": "model"
+          }
+        },
+        {
+          "link": null,
+          "localized_name": "model.prompt",
+          "name": "model.prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "model.prompt"
+          }
+        },
+        {
+          "link": null,
+          "localized_name": "model.resolution",
+          "name": "model.resolution",
+          "type": "COMBO",
+          "widget": {
+            "name": "model.resolution"
+          }
+        },
+        {
+          "link": null,
+          "localized_name": "model.ratio",
+          "name": "model.ratio",
+          "type": "COMBO",
+          "widget": {
+            "name": "model.ratio"
+          }
+        },
+        {
+          "link": null,
+          "localized_name": "model.duration",
+          "name": "model.duration",
+          "type": "INT",
+          "widget": {
+            "name": "model.duration"
+          }
+        },
+        {
+          "link": null,
+          "localized_name": "model.generate_audio",
+          "name": "model.generate_audio",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "model.generate_audio"
+          }
+        },
+        {
+          "label": "image_1",
+          "link": null,
+          "localized_name": "model.reference_images.image_1",
+          "name": "model.reference_images.image_1",
+          "shape": 7,
+          "type": "IMAGE"
+        },
+        {
+          "label": "video_1",
+          "link": 31,
+          "localized_name": "model.reference_videos.video_1",
+          "name": "model.reference_videos.video_1",
+          "shape": 7,
+          "type": "VIDEO"
+        },
+        {
+          "label": "video_2",
+          "link": null,
+          "localized_name": "model.reference_videos.video_2",
+          "name": "model.reference_videos.video_2",
+          "shape": 7,
+          "type": "VIDEO"
+        },
+        {
+          "label": "audio_1",
+          "link": null,
+          "localized_name": "model.reference_audios.audio_1",
+          "name": "model.reference_audios.audio_1",
+          "shape": 7,
+          "type": "AUDIO"
+        },
+        {
+          "label": "asset_1",
+          "link": null,
+          "localized_name": "model.reference_assets.asset_1",
+          "name": "model.reference_assets.asset_1",
+          "shape": 7,
+          "type": "STRING"
+        },
+        {
+          "link": null,
+          "localized_name": "model.auto_downscale",
+          "name": "model.auto_downscale",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "model.auto_downscale"
+          }
+        },
+        {
+          "link": null,
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          }
+        },
+        {
+          "link": null,
+          "localized_name": "watermark",
+          "name": "watermark",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "watermark"
+          }
+        }
+      ],
+      "mode": 0,
+      "order": 10,
+      "outputs": [
+        {
+          "links": [
+            33
+          ],
+          "localized_name": "VIDEO",
+          "name": "VIDEO",
+          "type": "VIDEO"
+        }
+      ],
+      "pos": [
+        -409.9999926727984,
+        5819.999845921506
+      ],
+      "properties": {
+        "Node name for S&R": "ByteDance2ReferenceNode"
+      },
+      "showAdvanced": false,
+      "size": [
+        610,
+        408.96875
+      ],
+      "type": "ByteDance2ReferenceNode",
+      "widgets_values": [
+        "Seedance 2.0",
+        "Reference @video1 for all scene composition, lighting, and camera movement. Add a single blue morpho butterfly that enters from upper left, drifts and circles around the watch for a few seconds with wings catching the cold side light, then descends and lands on the leather strap. Wings open and close once after landing. No other changes. One continuous take, no cuts.",
+        "720p",
+        "16:9",
+        7,
+        false,
+        false,
+        74646607,
+        "randomize",
+        false
+      ]
+    },
+    {
+      "bgcolor": "#653",
+      "color": "#432",
+      "flags": {},
+      "id": 9,
+      "inputs": [
+        {
+          "link": null,
+          "localized_name": "model",
+          "name": "model",
+          "type": "COMFY_DYNAMICCOMBO_V3",
+          "widget": {
+            "name": "model"
+          }
+        },
+        {
+          "link": null,
+          "localized_name": "model.prompt",
+          "name": "model.prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "model.prompt"
+          }
+        },
+        {
+          "link": null,
+          "localized_name": "model.resolution",
+          "name": "model.resolution",
+          "type": "COMBO",
+          "widget": {
+            "name": "model.resolution"
+          }
+        },
+        {
+          "link": null,
+          "localized_name": "model.ratio",
+          "name": "model.ratio",
+          "type": "COMBO",
+          "widget": {
+            "name": "model.ratio"
+          }
+        },
+        {
+          "link": null,
+          "localized_name": "model.duration",
+          "name": "model.duration",
+          "type": "INT",
+          "widget": {
+            "name": "model.duration"
+          }
+        },
+        {
+          "link": null,
+          "localized_name": "model.generate_audio",
+          "name": "model.generate_audio",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "model.generate_audio"
+          }
+        },
+        {
+          "label": "image_1",
+          "link": 20,
+          "localized_name": "model.reference_images.image_1",
+          "name": "model.reference_images.image_1",
+          "shape": 7,
+          "type": "IMAGE"
+        },
+        {
+          "label": "image_2",
+          "link": 21,
+          "localized_name": "model.reference_images.image_2",
+          "name": "model.reference_images.image_2",
+          "shape": 7,
+          "type": "IMAGE"
+        },
+        {
+          "label": "image_3",
+          "link": null,
+          "localized_name": "model.reference_images.image_3",
+          "name": "model.reference_images.image_3",
+          "shape": 7,
+          "type": "IMAGE"
+        },
+        {
+          "label": "video_1",
+          "link": null,
+          "localized_name": "model.reference_videos.video_1",
+          "name": "model.reference_videos.video_1",
+          "shape": 7,
+          "type": "VIDEO"
+        },
+        {
+          "label": "audio_1",
+          "link": null,
+          "localized_name": "model.reference_audios.audio_1",
+          "name": "model.reference_audios.audio_1",
+          "shape": 7,
+          "type": "AUDIO"
+        },
+        {
+          "label": "asset_1",
+          "link": null,
+          "localized_name": "model.reference_assets.asset_1",
+          "name": "model.reference_assets.asset_1",
+          "shape": 7,
+          "type": "STRING"
+        },
+        {
+          "link": null,
+          "localized_name": "model.auto_downscale",
+          "name": "model.auto_downscale",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "model.auto_downscale"
+          }
+        },
+        {
+          "link": null,
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          }
+        },
+        {
+          "link": null,
+          "localized_name": "watermark",
+          "name": "watermark",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "watermark"
+          }
+        }
+      ],
+      "mode": 0,
+      "order": 6,
+      "outputs": [
+        {
+          "links": [
+            35
+          ],
+          "localized_name": "VIDEO",
+          "name": "VIDEO",
+          "type": "VIDEO"
+        }
+      ],
+      "pos": [
+        -409.9999926727984,
+        4729.999862429888
+      ],
+      "properties": {
+        "Node name for S&R": "ByteDance2ReferenceNode"
+      },
+      "showAdvanced": false,
+      "size": [
+        620,
+        432.96875
+      ],
+      "type": "ByteDance2ReferenceNode",
+      "widgets_values": [
+        "Seedance 2.0",
+        "Use @image1 to match scene lighting, environment, color grade, and atmosphere. Use @image2 as the vehicle reference. Top-down aerial shot looking straight down at the sedan. Camera slowly rolls clockwise around the car. The car remains centered and stationary throughout, and its headlight lights up in the end. One continuous take, no cuts, no camera shake.",
+        "720p",
+        "16:9",
+        7,
+        false,
+        false,
+        387457956,
+        "randomize",
+        false
+      ]
+    },
+    {
+      "bgcolor": "#353",
+      "color": "#232",
+      "flags": {},
+      "id": 17,
+      "inputs": [
+        {
+          "link": null,
+          "localized_name": "image",
+          "name": "image",
+          "type": "COMBO",
+          "widget": {
+            "name": "image"
+          }
+        },
+        {
+          "link": null,
+          "localized_name": "choose file to upload",
+          "name": "upload",
+          "type": "IMAGEUPLOAD",
+          "widget": {
+            "name": "upload"
+          }
+        }
+      ],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            21
+          ],
+          "localized_name": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE"
+        },
+        {
+          "links": null,
+          "localized_name": "MASK",
+          "name": "MASK",
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        -1199.9999394791232,
+        5119.999859678491
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "size": [
+        760,
+        340
+      ],
+      "title": "PRODUCT REFERENCE",
+      "type": "LoadImage",
+      "widgets_values": [
+        "e6dbc9cbb46649f95bb1e670cd3349456596e48a92af70c862d9fdfbcd8be65e.png",
+        "image"
+      ]
+    },
+    {
+      "bgcolor": "#653",
+      "color": "#432",
+      "flags": {},
+      "id": 19,
+      "inputs": [
+        {
+          "link": null,
+          "localized_name": "model",
+          "name": "model",
+          "type": "COMFY_DYNAMICCOMBO_V3",
+          "widget": {
+            "name": "model"
+          }
+        },
+        {
+          "link": 17,
+          "localized_name": "model.prompt",
+          "name": "model.prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "model.prompt"
+          }
+        },
+        {
+          "link": null,
+          "localized_name": "model.resolution",
+          "name": "model.resolution",
+          "type": "COMBO",
+          "widget": {
+            "name": "model.resolution"
+          }
+        },
+        {
+          "link": null,
+          "localized_name": "model.ratio",
+          "name": "model.ratio",
+          "type": "COMBO",
+          "widget": {
+            "name": "model.ratio"
+          }
+        },
+        {
+          "link": null,
+          "localized_name": "model.duration",
+          "name": "model.duration",
+          "type": "INT",
+          "widget": {
+            "name": "model.duration"
+          }
+        },
+        {
+          "link": null,
+          "localized_name": "model.generate_audio",
+          "name": "model.generate_audio",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "model.generate_audio"
+          }
+        },
+        {
+          "link": null,
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          }
+        },
+        {
+          "link": null,
+          "localized_name": "watermark",
+          "name": "watermark",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "watermark"
+          }
+        }
+      ],
+      "mode": 0,
+      "order": 5,
+      "outputs": [
+        {
+          "links": [
+            36
+          ],
+          "localized_name": "VIDEO",
+          "name": "VIDEO",
+          "type": "VIDEO"
+        }
+      ],
+      "pos": [
+        -409.9999926727984,
+        3899.9999688172375
+      ],
+      "properties": {
+        "Node name for S&R": "ByteDance2TextToVideoNode"
+      },
+      "size": [
+        620,
+        312.96875
+      ],
+      "type": "ByteDance2TextToVideoNode",
+      "widgets_values": [
+        "Seedance 2.0",
+        "A sleek, generic smartphone stands perfectly upright on its own, screen facing camera, in the middle of a dark ancient forest at night. No brand markings, no logos, screen surface dark and reflective. Camera performs a slow 360-degree orbit around the device at eye level, maintaining even distance and framing throughout. As the camera orbits, shafts of cold volumetric light filter through the tree canopy above, catching the device edges and casting long dramatic shadows across the forest floor. Bioluminescent particles drift slowly through the air around it. The device feels monolithic — impossibly still, slightly oversized relative to the environment. Professional motion design render — hyper-real CG aesthetic, physically based rendering, deep blacks, razor sharp product edges, cinematic anamorphic lens. Ultra slow orbit, one continuous take, no cuts.\n",
+        "1080p",
+        "16:9",
+        8,
+        true,
+        1148625786,
+        "randomize",
+        false
+      ]
+    },
+    {
+      "bgcolor": "#353",
+      "color": "#232",
+      "flags": {
+        "collapsed": false
+      },
+      "id": 20,
+      "inputs": [],
+      "mode": 0,
+      "order": 1,
+      "outputs": [
+        {
+          "links": [
+            17
+          ],
+          "name": "STRING",
+          "type": "STRING",
+          "widget": {
+            "name": "model.prompt"
+          }
+        }
+      ],
+      "pos": [
+        -1199.9999394791232,
+        3909.999829413124
+      ],
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "size": [
+        760,
+        640
+      ],
+      "title": "DESCRIBE B-ROLL",
+      "type": "PrimitiveNode",
+      "widgets_values": [
+        "A sleek, generic smartphone stands perfectly upright on its own, screen facing camera, in the middle of a dark ancient forest at night. No brand markings, no logos, screen surface dark and reflective. Camera performs a slow 360-degree orbit around the device at eye level, maintaining even distance and framing throughout. As the camera orbits, shafts of cold volumetric light filter through the tree canopy above, catching the device edges and casting long dramatic shadows across the forest floor. Bioluminescent particles drift slowly through the air around it. The device feels monolithic — impossibly still, slightly oversized relative to the environment. Professional motion design render — hyper-real CG aesthetic, physically based rendering, deep blacks, razor sharp product edges, cinematic anamorphic lens. Ultra slow orbit, one continuous take, no cuts.\n"
+      ]
+    },
+    {
+      "bgcolor": "#353",
+      "color": "#232",
+      "flags": {},
+      "id": 23,
+      "inputs": [
+        {
+          "link": null,
+          "localized_name": "image",
+          "name": "image",
+          "type": "COMBO",
+          "widget": {
+            "name": "image"
+          }
+        },
+        {
+          "link": null,
+          "localized_name": "choose file to upload",
+          "name": "upload",
+          "type": "IMAGEUPLOAD",
+          "widget": {
+            "name": "upload"
+          }
+        }
+      ],
+      "mode": 0,
+      "order": 2,
+      "outputs": [
+        {
+          "links": [
+            20
+          ],
+          "localized_name": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE"
+        },
+        {
+          "links": null,
+          "localized_name": "MASK",
+          "name": "MASK",
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        -1199.9999394791232,
+        4729.999862429888
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "size": [
+        760,
+        340
+      ],
+      "title": "SCENE TO MATCH",
+      "type": "LoadImage",
+      "widgets_values": [
+        "97496b8d4e3639a26d015112fd5f190c3934eb93d4ec2ff438595538abca054b.png",
+        "image"
+      ]
+    },
+    {
+      "bgcolor": "#353",
+      "color": "#232",
+      "flags": {},
+      "id": 24,
+      "inputs": [
+        {
+          "link": null,
+          "localized_name": "file",
+          "name": "file",
+          "type": "COMBO",
+          "widget": {
+            "name": "file"
+          }
+        },
+        {
+          "link": null,
+          "localized_name": "choose file to upload",
+          "name": "upload",
+          "type": "IMAGEUPLOAD",
+          "widget": {
+            "name": "upload"
+          }
+        }
+      ],
+      "mode": 0,
+      "order": 3,
+      "outputs": [
+        {
+          "links": [
+            30
+          ],
+          "localized_name": "VIDEO",
+          "name": "VIDEO",
+          "type": "VIDEO"
+        }
+      ],
+      "pos": [
+        -1209.9999835014748,
+        5639.999844545807
+      ],
+      "properties": {
+        "Node name for S&R": "LoadVideo"
+      },
+      "size": [
+        770,
+        630
+      ],
+      "title": "INPUT VIDEO",
+      "type": "LoadVideo",
+      "widgets_values": [
+        "36c0142281084219c29272b22aad8fa21a1a153dd23b3dc97eced79d875c508e.mp4",
+        "image"
+      ]
+    },
+    {
+      "bgcolor": "#353",
+      "color": "#232",
+      "flags": {
+        "collapsed": false
+      },
+      "id": 30,
+      "inputs": [
+        {
+          "link": 30,
+          "localized_name": "video",
+          "name": "video",
+          "type": "VIDEO"
+        },
+        {
+          "link": null,
+          "localized_name": "start_time",
+          "name": "start_time",
+          "type": "FLOAT",
+          "widget": {
+            "name": "start_time"
+          }
+        },
+        {
+          "link": null,
+          "localized_name": "duration",
+          "name": "duration",
+          "type": "FLOAT",
+          "widget": {
+            "name": "duration"
+          }
+        },
+        {
+          "link": null,
+          "localized_name": "strict_duration",
+          "name": "strict_duration",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "strict_duration"
+          }
+        }
+      ],
+      "mode": 0,
+      "order": 7,
+      "outputs": [
+        {
+          "links": [
+            31
+          ],
+          "localized_name": "VIDEO",
+          "name": "VIDEO",
+          "type": "VIDEO"
+        }
+      ],
+      "pos": [
+        -409.9999926727984,
+        5639.999844545807
+      ],
+      "properties": {
+        "Node name for S&R": "Video Slice"
+      },
+      "size": [
+        270,
+        140
+      ],
+      "type": "Video Slice",
+      "widgets_values": [
+        0,
+        10,
+        false
+      ]
+    },
+    {
+      "bgcolor": "#653",
+      "color": "#432",
+      "flags": {},
+      "id": 31,
+      "inputs": [
+        {
+          "link": 33,
+          "localized_name": "video",
+          "name": "video",
+          "type": "VIDEO"
+        },
+        {
+          "link": null,
+          "localized_name": "filename_prefix",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          }
+        },
+        {
+          "link": null,
+          "localized_name": "format",
+          "name": "format",
+          "type": "COMBO",
+          "widget": {
+            "name": "format"
+          }
+        },
+        {
+          "link": null,
+          "localized_name": "codec",
+          "name": "codec",
+          "type": "COMBO",
+          "widget": {
+            "name": "codec"
+          }
+        }
+      ],
+      "mode": 0,
+      "order": 11,
+      "outputs": [],
+      "pos": [
+        229.99998164749633,
+        5639.999844545807
+      ],
+      "properties": {},
+      "size": [
+        770,
+        660
+      ],
+      "type": "SaveVideo",
+      "widgets_values": [
+        "video/Efdit",
+        "auto",
+        "auto"
+      ]
+    },
+    {
+      "bgcolor": "#653",
+      "color": "#432",
+      "flags": {},
+      "id": 32,
+      "inputs": [
+        {
+          "link": 35,
+          "localized_name": "video",
+          "name": "video",
+          "type": "VIDEO"
+        },
+        {
+          "link": null,
+          "localized_name": "filename_prefix",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          }
+        },
+        {
+          "link": null,
+          "localized_name": "format",
+          "name": "format",
+          "type": "COMBO",
+          "widget": {
+            "name": "format"
+          }
+        },
+        {
+          "link": null,
+          "localized_name": "codec",
+          "name": "codec",
+          "type": "COMBO",
+          "widget": {
+            "name": "codec"
+          }
+        }
+      ],
+      "mode": 0,
+      "order": 9,
+      "outputs": [],
+      "pos": [
+        239.99997981323168,
+        4729.999862429888
+      ],
+      "properties": {},
+      "size": [
+        760,
+        660
+      ],
+      "type": "SaveVideo",
+      "widgets_values": [
+        "video/Insert",
+        "auto",
+        "auto"
+      ]
+    },
+    {
+      "bgcolor": "#653",
+      "color": "#432",
+      "flags": {},
+      "id": 33,
+      "inputs": [
+        {
+          "link": 36,
+          "localized_name": "video",
+          "name": "video",
+          "type": "VIDEO"
+        },
+        {
+          "link": null,
+          "localized_name": "filename_prefix",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          }
+        },
+        {
+          "link": null,
+          "localized_name": "format",
+          "name": "format",
+          "type": "COMBO",
+          "widget": {
+            "name": "format"
+          }
+        },
+        {
+          "link": null,
+          "localized_name": "codec",
+          "name": "codec",
+          "type": "COMBO",
+          "widget": {
+            "name": "codec"
+          }
+        }
+      ],
+      "mode": 0,
+      "order": 8,
+      "outputs": [],
+      "pos": [
+        239.99997981323168,
+        3889.9999247948863
+      ],
+      "properties": {},
+      "size": [
+        760,
+        660
+      ],
+      "type": "SaveVideo",
+      "widgets_values": [
+        "video/B-Roll",
+        "auto",
+        "auto"
+      ]
+    },
+    {
+      "bgcolor": "#653",
+      "color": "#432",
+      "flags": {},
+      "id": 34,
+      "inputs": [],
+      "mode": 0,
+      "order": 4,
+      "outputs": [],
+      "pos": [
+        -1240.000023855297,
+        3529.9998074019486
+      ],
+      "properties": {},
+      "size": [
+        610,
+        260
+      ],
+      "title": "Quick Intro",
+      "type": "MarkdownNote",
+      "widgets_values": [
+        "**METHOD 1 - PROMPT ONLY**\n<br> Input text prompt to generate a B-Roll shot\n\n**METHOD 2 - REFERENCE IMAGES**\n<br> Input a still frame from a video production and a product reference image to match the scene and generate an insert shot.\n\n**METHOD 3 - VIDEO EDIT**\n<br> Add special effects or alter objects from an existing shot\n\n**Choose the method for different production use cases, and bypass all nodes in the other two methods**"
+      ]
+    }
+  ],
+  "revision": 0,
+  "version": 0.4
+}

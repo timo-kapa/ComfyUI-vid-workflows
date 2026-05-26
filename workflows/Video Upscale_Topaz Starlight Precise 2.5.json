@@ -1,0 +1,168 @@
+{
+  "config": {},
+  "extra": {
+    "VHS_KeepIntermediate": true,
+    "VHS_MetadataImage": true,
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "ds": {
+      "offset": [
+        -750.1293725791386,
+        -1536.5808924070566
+      ],
+      "scale": 0.5600198208975257
+    },
+    "frontendVersion": "1.43.6",
+    "links_added_by_ue": [],
+    "ue_links": []
+  },
+  "groups": [],
+  "id": "f65b4fcc-5a89-48db-88c0-495fcb6f201f",
+  "last_link_id": 4,
+  "last_node_id": 6,
+  "links": [
+    [
+      3,
+      3,
+      0,
+      5,
+      0,
+      "VIDEO"
+    ],
+    [
+      4,
+      5,
+      0,
+      4,
+      0,
+      "VIDEO"
+    ]
+  ],
+  "nodes": [
+    {
+      "flags": {},
+      "id": 3,
+      "inputs": [],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            3
+          ],
+          "name": "VIDEO",
+          "type": "VIDEO"
+        }
+      ],
+      "pos": [
+        1239.999986797413,
+        1890.0000159438011
+      ],
+      "properties": {
+        "Node name for S&R": "LoadVideo",
+        "cnr_id": "comfy-core",
+        "ue_properties": {
+          "input_ue_unconnectable": {},
+          "widget_ue_connectable": {}
+        },
+        "ver": "0.18.1"
+      },
+      "size": [
+        370,
+        773.40625
+      ],
+      "type": "LoadVideo",
+      "widgets_values": [
+        "running_horse.mp4",
+        "image"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 4,
+      "inputs": [
+        {
+          "link": 4,
+          "name": "video",
+          "type": "VIDEO"
+        }
+      ],
+      "mode": 0,
+      "order": 2,
+      "outputs": [],
+      "pos": [
+        2109.950845180926,
+        1889.9788261434549
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ue_properties": {
+          "input_ue_unconnectable": {},
+          "widget_ue_connectable": {}
+        },
+        "ver": "0.18.1"
+      },
+      "size": [
+        360,
+        824.71875
+      ],
+      "type": "SaveVideo",
+      "widgets_values": [
+        "video/Topaz",
+        "auto",
+        "auto"
+      ]
+    },
+    {
+      "bgcolor": "#653",
+      "color": "#432",
+      "flags": {},
+      "id": 5,
+      "inputs": [
+        {
+          "link": 3,
+          "name": "video",
+          "type": "VIDEO"
+        }
+      ],
+      "mode": 0,
+      "order": 1,
+      "outputs": [
+        {
+          "links": [
+            4
+          ],
+          "name": "VIDEO",
+          "type": "VIDEO"
+        }
+      ],
+      "pos": [
+        1659.9975999745593,
+        1889.9999765844304
+      ],
+      "properties": {
+        "Node name for S&R": "TopazVideoEnhance"
+      },
+      "size": [
+        390,
+        280
+      ],
+      "type": "TopazVideoEnhance",
+      "widgets_values": [
+        true,
+        "Starlight Precise 2.5",
+        "FullHD (1080p)",
+        "low",
+        false,
+        "apo-8",
+        1,
+        60,
+        false,
+        0.01,
+        "Low"
+      ]
+    }
+  ],
+  "revision": 0,
+  "version": 0.4
+}
